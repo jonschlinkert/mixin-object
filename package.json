@@ -1,0 +1,41 @@
+{
+  "name": "mixin-object",
+  "description": "Add the properties from any number of objects into the first object. To create a new object pass an empty object as the first arg.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/mixin-object",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonschlinkert/mixin-object.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/mixin-object/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jonschlinkert/mixin-object/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "devDependencies": {
+    "verb-tag-jscomments": ">= 0.2.0",
+    "verb": ">= 0.2.6",
+    "mocha": "*"
+  },
+  "keywords": [
+    "mixin"
+  ],
+  "dependencies": {
+    "for-own": "^0.1.1"
+  }
+}
