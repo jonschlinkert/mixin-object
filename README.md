@@ -20,9 +20,12 @@ npm test
 ```js
 var mixin = require('mixin-object');
 
-var o = {c: 'c'};
-mixin({}, {a: 'a'}, {b: 'b'});
-//=> {a: 'a', b: 'b'}
+var obj = {c: 'c'};
+var foo = mixin({a: 'a'}, {b: 'b'});
+console.log(foo);
+//=> {c: 'c', a: 'a', b: 'b'}
+console.log(obj);
+//=> {c: 'c'}
 
 mixin({}, {a: 'a'}, {b: 'b'});
 //=> {a: 'a', b: 'b'}
