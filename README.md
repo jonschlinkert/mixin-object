@@ -1,7 +1,6 @@
 # mixin-object [![NPM version](https://badge.fury.io/js/mixin-object.svg)](http://badge.fury.io/js/mixin-object)
 
-
-> Add the properties from any number of objects into the first object. To create a new object pass an empty object as the first arg.
+> Extend the properties from any number of objects onto the first object. Pass an empty object as the first arg to create a new object.
 
 ## Install
 #### Install with [npm](npmjs.org):
