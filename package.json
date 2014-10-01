@@ -1,7 +1,7 @@
 {
   "name": "mixin-object",
   "description": "Extend the properties from any number of objects onto the first object. Pass an empty object as the first arg to create a new object.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/mixin-object",
   "author": {
     "name": "Jon Schlinkert",

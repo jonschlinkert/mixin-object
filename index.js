@@ -10,7 +10,7 @@
 var forOwn = require('for-own');
 
 module.exports = function mixIn(o) {
-  var args = [].slice.call(arguments, 1);
+  var args = [].slice.call(arguments);
   var len = args.length;
 
   if (o == null) {
