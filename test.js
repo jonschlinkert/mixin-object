@@ -7,7 +7,7 @@
 
 'use strict';
 
-var should = require('should');
+require('should');
 var mixin = require('./');
 
 describe('.mixin()', function () {
