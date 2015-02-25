@@ -1,7 +1,7 @@
 {
   "name": "mixin-object",
-  "description": "Extend the properties from any number of objects onto the first object. Pass an empty object as the first arg to create a new object.",
-  "version": "0.1.1",
+  "description": "Mixin the own and inherited properties of other objects onto the first object. Pass an empty object as the first arg to shallow clone.",
+  "version": "1.0.0",
   "homepage": "https://github.com/jonschlinkert/mixin-object",
   "author": {
     "name": "Jon Schlinkert",
@@ -29,12 +29,25 @@
     "test": "mocha"
   },
   "dependencies": {
-    "for-own": "^0.1.1"
+    "for-in": "^0.1.3",
+    "for-own": "^0.1.1",
+    "is-plain-object": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "should": "^5.0.1"
   },
   "keywords": [
-    "mixin"
+    "copy",
+    "extend",
+    "key",
+    "merge",
+    "mixin",
+    "object",
+    "prop",
+    "properties",
+    "property",
+    "util",
+    "value"
   ]
 }
