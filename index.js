@@ -1,34 +1,29 @@
 /*!
  * mixin-object <https://github.com/jonschlinkert/mixin-object>
  *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
- * Licensed under the MIT License
+ * Copyright (c) 2014-2015, Jon Schlinkert.
+ * Licensed under the MIT License.
  */
 
 'use strict';
 
-var forOwn = require('for-own');
+var isObject = require('is-plain-object');
+var forIn = require('for-in');
 
-module.exports = function mixIn(o) {
-  var args = [].slice.call(arguments);
-  var len = args.length;
+module.exports = function mixin(o, objects) {
+  if (!o || !objects) { return o || {}; }
 
-  if (o == null) {
-    return {};
-  }
-
-  if (len === 0) {
-    return o;
-  }
+  var len = arguments.length - 1;
 
   function copy(value, key) {
     this[key] = value;
   }
 
   for (var i = 0; i < len; i++) {
-    var obj = args[i];
-    if (obj != null) {
-      forOwn(obj, copy, o);
+    var obj = arguments[i + 1];
+
+    if (isObject(obj)) {
+      forIn(obj, copy, o);
     }
   }
   return o;
