@@ -1,19 +1,13 @@
 # mixin-object [![NPM version](https://badge.fury.io/js/mixin-object.svg)](http://badge.fury.io/js/mixin-object)
-> Extend the properties from any number of objects onto the first object. Pass an empty object as the first arg to create a new object.
+> Mixin the own and inherited properties of other objects onto the first object. Pass an empty object as the first arg to shallow clone.
+
+If you only want to combine own-properties, use [extend-shallow](https://github.com/jonschlinkert/extend-shallow).
 
 ## Install with [npm](npmjs.org)
 
 ```bash
 npm i mixin-object --save
 ```
-
-## Running tests
-Install dev dependencies.
-
-```bash
-npm i -d && npm test
-```
-
 
 ## Usage
 
@@ -30,6 +24,14 @@ console.log(obj);
 mixin({}, {a: 'a'}, {b: 'b'});
 //=> {a: 'a', b: 'b'}
 ```
+
+## Running tests
+Install dev dependencies.
+
+```bash
+npm i -d && npm test
+```
+
 
 ## Author
 
@@ -50,6 +52,7 @@ Other projects that I maintain:
   - [arrayify-compact](https://github.com/jonschlinkert/arrayify-compact)
   - [compact-object](https://github.com/jonschlinkert/compact-object)
   - [delete](https://github.com/jonschlinkert/delete)
+  - [extend-shallow](https://github.com/jonschlinkert/extend-shallow)
   - [for-in](https://github.com/jonschlinkert/for-in)
   - [for-own](https://github.com/jonschlinkert/for-own)
   - [has-any](https://github.com/jonschlinkert/has-any)
