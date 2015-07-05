@@ -1,27 +1,34 @@
-/*!
- * mixin-object <https://github.com/jonschlinkert/mixin-object>
- *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
- * Licensed under the MIT License
- */
-
 'use strict';
 
+/* deps: mocha */
 require('should');
 var mixin = require('./');
 
 describe('.mixin()', function () {
-  it('should mix all objects into the first one.', function () {
-    var c = {c: 'c'};
-    mixin(c, {a: 'a'}, {b: 'b'});
-    c.should.eql({c: 'c', a: 'a', b: 'b'});
+  it('should throw an error when the first argument is not an object.', function () {
+    (function () {
+      mixin();
+    }).should.throw('mixin-object expects the first argument to be an object.');
   });
 
-  it('should mix all objects into a new object.', function () {
+  it('should mix all objects into the first one.', function () {
+    var obj = {c: 'c'};
+    mixin(obj, {a: 'a'}, {b: 'b'});
+    obj.should.eql({c: 'c', a: 'a', b: 'b'});
+  });
+
+  it('should return a new object when an empty object is passed.', function () {
     var c = {c: 'c'};
     var d = mixin({}, c, {a: 'a'}, {b: 'b'});
     c.should.eql({c: 'c'});
     d.should.eql({c: 'c', a: 'a', b: 'b'});
+  });
+
+  it('should mix properties onto a function.', function () {
+    function foo() {}
+    var c = {c: 'c'};
+    var d = mixin(foo, c, {a: 'a'}, {b: 'b'});
+    foo.should.have.properties(['a', 'b', 'c']);
   });
 
   it('should mixin all objects.', function () {
