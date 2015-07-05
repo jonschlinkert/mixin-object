@@ -1,0 +1,38 @@
+{
+  "name": "mixin-object",
+  "description": "Mixin the own and inherited properties of other objects onto the first object. Pass an empty object as the first arg to shallow clone.",
+  "homepage": "https://github.com/jonschlinkert/mixin-object",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/mixin-object",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": [
+    "index.js"
+  ],
+  "dependencies": {
+    "for-in": "^0.1.3",
+    "is-extendable": "^0.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^7.0.1"
+  },
+  "keywords": [
+    "assign",
+    "copy",
+    "extend",
+    "key",
+    "merge",
+    "mixin",
+    "object",
+    "objects",
+    "prop",
+    "properties",
+    "property",
+    "shallow",
+    "util",
+    "value"
+  ]
+}
