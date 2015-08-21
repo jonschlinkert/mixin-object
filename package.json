@@ -1,7 +1,7 @@
 {
   "name": "mixin-object",
   "description": "Mixin the own and inherited properties of other objects onto the first object. Pass an empty object as the first arg to shallow clone.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://github.com/jonschlinkert/mixin-object",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/mixin-object",
