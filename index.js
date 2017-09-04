@@ -3,34 +3,33 @@
 var isObject = require('is-extendable');
 var forIn = require('for-in');
 
-function mixin(target, objects) {
+module.exports = function mixin(target, objects) {
   if (!isObject(target)) {
-    throw new TypeError('mixin-object expects the first argument to be an object.');
+    throw new TypeError('expected the first argument to be an object');
   }
-  var len = arguments.length, i = 0;
-  while (++i < len) {
-    var obj = arguments[i];
-    if (isObject(obj)) {
-      forIn(obj, copy, target);
-    }
+
+  var len = arguments.length;
+  var idx = 0;
+
+  while (++idx < len) {
+    copy(target, arguments[idx]);
   }
   return target;
-}
+};
 
 /**
  * copy properties from the source object to the
- * target object.
+ * target object. We don't use `Object.keys` here, since
+ * "mixin" also adds non-enumerable keys.
  *
  * @param  {*} `value`
  * @param  {String} `key`
  */
 
-function copy(value, key) {
-  this[key] = value;
+function copy(target, obj) {
+  if (isObject(obj)) {
+    forIn(obj, function(value, key) {
+      target[key] = value;
+    });
+  }
 }
-
-/**
- * Expose `mixin`
- */
-
-module.exports = mixin;
