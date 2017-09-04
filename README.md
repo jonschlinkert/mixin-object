@@ -1,22 +1,18 @@
-# mixin-object [![NPM version](https://badge.fury.io/js/mixin-object.svg)](http://badge.fury.io/js/mixin-object)
+# mixin-object [![NPM version](https://img.shields.io/npm/v/mixin-object.svg?style=flat)](https://www.npmjs.com/package/mixin-object) [![NPM monthly downloads](https://img.shields.io/npm/dm/mixin-object.svg?style=flat)](https://npmjs.org/package/mixin-object) [![NPM total downloads](https://img.shields.io/npm/dt/mixin-object.svg?style=flat)](https://npmjs.org/package/mixin-object) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/mixin-object.svg?style=flat&label=Travis)](https://travis-ci.org/jonschlinkert/mixin-object)
 
 > Mixin the own and inherited properties of other objects onto the first object. Pass an empty object as the first arg to shallow clone.
 
-If you only want to combine own-properties, use [extend-shallow](https://github.com/jonschlinkert/extend-shallow).
+Follow this project's author, [Jon Schlinkert](https://github.com/jonschlinkert), for updates on this project and others.
 
 ## Install
 
-Install with [npm](https://www.npmjs.com/)
+Install with [npm](https://www.npmjs.com/):
 
 ```sh
-$ npm i mixin-object --save
+$ npm install --save mixin-object
 ```
 
-Install with [bower](http://bower.io/)
-
-```sh
-$ bower install mixin-object --save
-```
+If you only want to combine own-properties, use [extend-shallow](https://github.com/jonschlinkert/extend-shallow).
 
 ## Usage
 
@@ -34,42 +30,56 @@ mixin({}, {a: 'a'}, {b: 'b'});
 //=> {a: 'a', b: 'b'}
 ```
 
-## Related
+## About
 
-* [assign-deep](https://github.com/jonschlinkert/assign-deep): Deeply assign the enumerable properties of source objects to a destination object.
-* [defaults-deep](https://github.com/jonschlinkert/defaults-deep): Like `extend` but recursively copies only the missing properties/values to the target object.
-* [extend-shallow](https://github.com/jonschlinkert/extend-shallow): Extend an object with the properties of additional objects. node.js/javascript util.
-* [for-own](https://github.com/jonschlinkert/for-own): Iterate over the own enumerable properties of an object, and return an object with properties… [more](https://github.com/jonschlinkert/for-own)
-* [for-in](https://github.com/jonschlinkert/for-in): Iterate over the own and inherited enumerable properties of an objecte, and return an object… [more](https://github.com/jonschlinkert/for-in)
-* [isobject](https://github.com/jonschlinkert/isobject): Returns true if the value is an object and not an array or null.
-* [is-plain-object](https://github.com/jonschlinkert/is-plain-object): Returns true if an object was created by the `Object` constructor.
-* [mixin-deep](https://github.com/jonschlinkert/mixin-deep): Deeply mix the properties of objects into the first object. Like merge-deep, but doesn't clone.
-* [merge-deep](https://github.com/jonschlinkert/merge-deep): Recursively merge values in a javascript object.
+### Related projects
 
-## Running tests
+You might also be interested in these projects:
 
-Install dev dependencies:
+* [assign-deep](https://www.npmjs.com/package/assign-deep): Deeply assign the enumerable properties and/or es6 Symbol properies of source objects to the target… [more](https://github.com/jonschlinkert/assign-deep) | [homepage](https://github.com/jonschlinkert/assign-deep "Deeply assign the enumerable properties and/or es6 Symbol properies of source objects to the target (first) object.")
+* [defaults-deep](https://www.npmjs.com/package/defaults-deep): Like `extend` but recursively copies only the missing properties/values to the target object. | [homepage](https://github.com/jonschlinkert/defaults-deep "Like `extend` but recursively copies only the missing properties/values to the target object.")
+* [extend-shallow](https://www.npmjs.com/package/extend-shallow): Extend an object with the properties of additional objects. node.js/javascript util. | [homepage](https://github.com/jonschlinkert/extend-shallow "Extend an object with the properties of additional objects. node.js/javascript util.")
+* [for-in](https://www.npmjs.com/package/for-in): Iterate over the own and inherited enumerable properties of an object, and return an object… [more](https://github.com/jonschlinkert/for-in) | [homepage](https://github.com/jonschlinkert/for-in "Iterate over the own and inherited enumerable properties of an object, and return an object with properties that evaluate to true from the callback. Exit early by returning `false`. JavaScript/Node.js")
+* [for-own](https://www.npmjs.com/package/for-own): Iterate over the own enumerable properties of an object, and return an object with properties… [more](https://github.com/jonschlinkert/for-own) | [homepage](https://github.com/jonschlinkert/for-own "Iterate over the own enumerable properties of an object, and return an object with properties that evaluate to true from the callback. Exit early by returning `false`. JavaScript/Node.js.")
+* [is-plain-object](https://www.npmjs.com/package/is-plain-object): Returns true if an object was created by the `Object` constructor. | [homepage](https://github.com/jonschlinkert/is-plain-object "Returns true if an object was created by the `Object` constructor.")
+* [isobject](https://www.npmjs.com/package/isobject): Returns true if the value is an object and not an array or null. | [homepage](https://github.com/jonschlinkert/isobject "Returns true if the value is an object and not an array or null.")
+* [merge-deep](https://www.npmjs.com/package/merge-deep): Recursively merge values in a javascript object. | [homepage](https://github.com/jonschlinkert/merge-deep "Recursively merge values in a javascript object.")
+* [mixin-deep](https://www.npmjs.com/package/mixin-deep): Deeply mix the properties of objects into the first object. Like merge-deep, but doesn't clone. | [homepage](https://github.com/jonschlinkert/mixin-deep "Deeply mix the properties of objects into the first object. Like merge-deep, but doesn't clone.")
+
+### Contributing
+
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](../../issues/new).
+
+### Building docs
+
+_(This project's readme.md is generated by [verb](https://github.com/verbose/verb-generate-readme), please don't edit the readme directly. Any changes to the readme must be made in the [.verb.md](.verb.md) readme template.)_
+
+To generate the readme, run the following command:
 
 ```sh
-$ npm i -d && npm test
+$ npm install -g verbose/verb#dev verb-generate-readme && verb
 ```
 
-## Contributing
+### Running tests
 
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jonschlinkert/mixin-object/issues/new)
+Running and reviewing unit tests is a great way to get familiarized with a library and its API. You can install dependencies and run tests with the following command:
 
-## Author
+```sh
+$ npm install && npm test
+```
+
+### Author
 
 **Jon Schlinkert**
 
-+ [github/jonschlinkert](https://github.com/jonschlinkert)
-+ [twitter/jonschlinkert](http://twitter.com/jonschlinkert)
+* [github/jonschlinkert](https://github.com/jonschlinkert)
+* [twitter/jonschlinkert](https://twitter.com/jonschlinkert)
 
-## License
+### License
 
-Copyright © 2014-2015 [Jon Schlinkert](https://github.com/jonschlinkert)
-Released under the MIT license.
+Copyright © 2017, [Jon Schlinkert](https://github.com/jonschlinkert).
+Released under the [MIT License](LICENSE).
 
 ***
 
-_This file was generated by [verb-cli](https://github.com/assemble/verb-cli) on July 05, 2015._
+_This file was generated by [verb-generate-readme](https://github.com/verbose/verb-generate-readme), v0.6.0, on September 04, 2017._
