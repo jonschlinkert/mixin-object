@@ -20,7 +20,7 @@ If you only want to combine own-properties, use [extend-shallow](https://github.
 var mixin = require('mixin-object');
 
 var obj = {c: 'c'};
-var foo = mixin({a: 'a'}, {b: 'b'});
+var foo = mixin(obj, {a: 'a'}, {b: 'b'});
 console.log(foo);
 //=> {c: 'c', a: 'a', b: 'b'}
 console.log(obj);
